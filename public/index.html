@@ -3,8 +3,292 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Em breve</title>
-  <style>body{margin:0;min-height:100vh;display:grid;place-items:center;font-family:system-ui,sans-serif;background:#111;color:#fff}</style>
+  <title>UAU | Emagrecimento com acompanhamento médico</title>
+  <meta name="description" content="Programa de emagrecimento com avaliação médica individual, entrega do tratamento por farmácia parceira e suporte durante toda a jornada.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --indigo:#23195A; --indigo-2:#34287A; --ink:#18132E; --muted:#5B5675;
+      --sun:#FFCF33; --sun-2:#FFE07A; --lilac:#EFEBFF; --paper:#FFFFFF; --mint:#1F9D6B;
+      --line:#DDD7F3;
+      --display:"Bricolage Grotesque", system-ui, sans-serif;
+      --body:"Figtree", system-ui, sans-serif;
+      --wrap:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block}
+    a{color:inherit}
+    .wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+    h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.02em}
+    h2{font-size:clamp(2rem,4.6vw,3.2rem);font-weight:800;max-width:18ch}
+    h3{font-size:1.3rem;font-weight:700;letter-spacing:-.01em}
+    p{margin:0}
+    :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+
+    /* Placeholder: conteúdo a preencher */
+    .ph{background:repeating-linear-gradient(-45deg,#FFF6D6 0 8px,#FFEFB8 8px 16px);color:#6A5300;border:1px dashed #C9A100;border-radius:6px;padding:0 .35em;font-weight:600}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;font:700 1.05rem/1 var(--body);text-decoration:none;
+      background:var(--sun);color:var(--ink);padding:18px 30px;border-radius:999px;border:0;cursor:pointer;
+      box-shadow:0 6px 0 #C79A00;transition:transform .12s, box-shadow .12s}
+    .btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #C79A00}
+    .btn:active{transform:translateY(6px);box-shadow:0 0 0 #C79A00}
+    .btn--sm{padding:12px 20px;font-size:.95rem;box-shadow:0 4px 0 #C79A00}
+
+    /* Header */
+    .top{position:sticky;top:0;z-index:20;background:var(--indigo);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+    .top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+    .logo{font:800 1.9rem/1 var(--display);letter-spacing:-.04em;text-decoration:none;color:#fff}
+    .logo span{color:var(--sun)}
+
+    /* Hero */
+    .hero{background:var(--indigo);color:#fff;overflow:hidden;position:relative}
+    .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:96px;position:relative;z-index:1}
+    .hero h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800;max-width:13ch}
+    .hero .lead{font-size:1.2rem;color:#D9D3FF;margin:24px 0 36px;max-width:46ch}
+    .hero .assure{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;padding:0;list-style:none;color:#D9D3FF;font-size:.95rem}
+    .hero .assure li{display:flex;align-items:center;gap:8px}
+    .tick{width:20px;height:20px;flex:none;border-radius:50%;background:var(--mint);display:grid;place-items:center}
+    .tick svg{width:12px;height:12px}
+
+    /* Elemento-assinatura: o "uau" gigante que se expande */
+    .wow{position:absolute;right:-4vw;bottom:-6vw;font:800 clamp(14rem,34vw,30rem)/.8 var(--display);letter-spacing:-.06em;
+      color:transparent;-webkit-text-stroke:2px rgba(255,207,51,.22);user-select:none;pointer-events:none;z-index:0;
+      animation:breathe 2.4s cubic-bezier(.2,.7,.2,1) both}
+    @keyframes breathe{from{letter-spacing:-.14em;opacity:0}to{letter-spacing:-.06em;opacity:1}}
+
+    .offer-card{background:var(--paper);color:var(--ink);border-radius:28px;padding:30px;box-shadow:0 24px 60px rgba(10,6,40,.35)}
+    .offer-card .tag{display:inline-block;background:var(--lilac);color:var(--indigo);font-weight:700;font-size:.85rem;padding:6px 12px;border-radius:999px}
+    .offer-card h3{margin:16px 0 6px;font-size:1.5rem}
+    .price{font:800 3rem/1 var(--display);letter-spacing:-.03em;margin:14px 0 4px}
+    .price small{display:block;margin-top:10px;font:500 1rem var(--body);color:var(--muted);letter-spacing:0}
+    .offer-card ul{list-style:none;padding:0;margin:20px 0 24px;display:grid;gap:10px}
+    .offer-card li{display:flex;gap:10px;align-items:flex-start}
+    .offer-card .btn{width:100%}
+    .fine{font-size:.82rem;color:var(--muted);margin-top:14px;line-height:1.5}
+
+    section{padding:104px 0}
+    .intro{color:var(--muted);font-size:1.15rem;max-width:56ch;margin-top:18px}
+
+    /* Como funciona: uma sequência real, por isso numerada */
+    .steps{list-style:none;padding:0;margin:56px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:s;border-top:2px solid var(--ink)}
+    .steps li{counter-increment:s;padding:28px 24px 0 0;position:relative}
+    .steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--sun);
+      font:800 1.2rem/1 var(--display);margin:-51px 0 22px}
+    .steps p{color:var(--muted);margin-top:10px}
+
+    /* Incluído */
+    .incl{background:var(--lilac)}
+    .incl-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+    .incl-list{list-style:none;padding:0;margin:0}
+    .incl-list li{padding:24px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:18px}
+    .incl-list li:first-child{padding-top:0}
+    .incl-list p{color:var(--muted);margin-top:6px}
+    .icon{width:48px;height:48px;border-radius:14px;background:var(--indigo);color:var(--sun);display:grid;place-items:center}
+    .icon svg{width:24px;height:24px}
+    .bump{margin-top:28px;background:var(--paper);border:2px dashed var(--indigo-2);border-radius:20px;padding:22px 24px}
+    .bump strong{font-family:var(--display);font-size:1.15rem}
+    .bump p{color:var(--muted);margin-top:6px}
+
+    /* Depoimentos */
+    .testi{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+    .testi figure{margin:0;padding:28px;border:1.5px solid var(--line);border-radius:22px}
+    .testi blockquote{margin:0;font-size:1.05rem}
+    .testi figcaption{margin-top:18px;color:var(--muted);font-size:.92rem}
+
+    /* Garantia */
+    .guarantee{background:var(--indigo);color:#fff}
+    .guarantee .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+    .seal{width:150px;height:150px;border-radius:50%;background:var(--sun);color:var(--ink);display:grid;place-items:center;text-align:center;
+      font:800 1.1rem/1.05 var(--display);padding:18px;transform:rotate(-8deg)}
+    .guarantee p{color:#D9D3FF;margin-top:14px;max-width:60ch;font-size:1.1rem}
+
+    /* FAQ */
+    .faq{max-width:780px}
+    .faq details{border-bottom:1px solid var(--line)}
+    .faq summary{cursor:pointer;list-style:none;padding:24px 40px 24px 0;font:700 1.15rem/1.3 var(--display);position:relative}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"";position:absolute;right:6px;top:50%;width:14px;height:14px;border-right:2.5px solid var(--ink);border-bottom:2.5px solid var(--ink);
+      transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+    .faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+    .faq details p{padding:0 0 24px;color:var(--muted);max-width:64ch}
+
+    /* CTA final */
+    .final{text-align:center;padding:120px 0}
+    .final h2{margin:0 auto;max-width:16ch;font-size:clamp(2.4rem,6vw,4.4rem)}
+    .final p{color:var(--muted);margin:20px auto 36px;max-width:48ch;font-size:1.15rem}
+
+    footer{background:var(--ink);color:#B8B2D6;font-size:.88rem;padding:56px 0 110px;line-height:1.7}
+    footer .logo{display:inline-block;margin-bottom:18px}
+    footer p+p{margin-top:12px}
+
+    /* Barra fixa no celular */
+    .sticky-cta{display:none}
+
+    @media (max-width:900px){
+      .hero .wrap{grid-template-columns:1fr;padding-top:48px;padding-bottom:64px}
+      .steps{grid-template-columns:1fr 1fr;row-gap:40px}
+      .incl-grid{grid-template-columns:1fr;gap:36px}
+      .testi{grid-template-columns:1fr}
+      .guarantee .wrap{grid-template-columns:1fr;justify-items:start}
+    }
+    @media (max-width:600px){
+      body{font-size:16px}
+      section{padding:72px 0}
+      .steps{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink);margin-left:22px}
+      .steps li{padding:0 0 32px 36px}
+      .steps li::before{position:absolute;left:-23px;top:-4px;margin:0}
+      .top .btn--sm{display:none}
+      .sticky-cta{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+        background:var(--paper);border-top:1px solid var(--line);align-items:center;gap:14px}
+      .sticky-cta .btn{flex:1;padding:16px}
+      .sticky-cta .p{font:800 1.2rem/1 var(--display)}
+    }
+    @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+  </style>
 </head>
-<body><h1>Em breve</h1></body>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="UAU, início">uau<span>.</span></a>
+    <a class="btn btn--sm" href="#oferta">Começar minha avaliação</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="padding:0">
+    <div class="wow" aria-hidden="true">uau</div>
+    <div class="wrap">
+      <div>
+        <h1>Emagreça com um médico do seu lado.</h1>
+        <p class="lead">Você passa por uma avaliação médica individual. Se o tratamento com tirzepatida for indicado para você, a receita é emitida e o medicamento chega na sua casa, com suporte do começo ao fim.</p>
+        <a class="btn" href="#oferta">Quero começar minha transformação</a>
+        <ul class="assure">
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Consulta com médico registrado no CRM</li>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Entrega por farmácia parceira</li>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Suporte durante todo o tratamento</li>
+        </ul>
+      </div>
+
+      <div class="offer-card" id="oferta">
+        <span class="tag">Programa UAU</span>
+        <h3>Tratamento completo com acompanhamento</h3>
+        <p class="price"><span class="ph">R$ 0.000</span> <small>ou <span class="ph">12x de R$ 000</span></small></p>
+        <ul>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Avaliação médica individual por vídeo</li>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Receita emitida pelo médico, se indicado</li>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Medicamento entregue na sua casa</li>
+          <li><span class="tick"><svg viewBox="0 0 12 12" fill="none" stroke="#fff" stroke-width="2.2"><path d="M2.5 6.2l2.3 2.3 4.7-5"/></svg></span>Suporte pelo WhatsApp em todas as etapas</li>
+        </ul>
+        <a class="btn" href="#CHECKOUT">Começar minha avaliação</a>
+        <p class="fine">A prescrição depende exclusivamente da avaliação do médico. Se o tratamento não for indicado para você, <span class="ph">o valor é devolvido integralmente</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona">
+    <div class="wrap">
+      <h2>Como funciona depois da sua compra</h2>
+      <p class="intro">São quatro etapas, e você sabe exatamente o que acontece em cada uma delas.</p>
+      <ol class="steps">
+        <li><h3>Avaliação médica</h3><p>Você faz uma consulta individual com um médico, que avalia seu histórico e verifica se o tratamento é seguro para você.</p></li>
+        <li><h3>Receita</h3><p>Se houver indicação, o médico emite a receita digital com a dose certa para o seu caso.</p></li>
+        <li><h3>Entrega</h3><p>Uma farmácia parceira separa o medicamento e envia para o seu endereço.</p></li>
+        <li><h3>Suporte contínuo</h3><p>Durante todo o tratamento, nossa equipe tira suas dúvidas e acompanha sua evolução.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="incl">
+    <div class="wrap incl-grid">
+      <div>
+        <h2>Tudo o que você precisa em um só lugar</h2>
+        <p class="intro">Nada de procurar médico, farmácia e nutricionista separadamente. A UAU cuida da jornada inteira.</p>
+        <div class="bump">
+          <strong>Quer ir mais longe? Adicione orientação nutricional.</strong>
+          <p>Um plano alimentar feito para a sua rotina, para potencializar os resultados do tratamento. Você pode incluir na hora da compra.</p>
+        </div>
+      </div>
+      <ul class="incl-list">
+        <li>
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3v6a4 4 0 008 0V3"/><path d="M10 13v3a4 4 0 008 0v-2"/><circle cx="18" cy="12" r="2"/></svg></span>
+          <div><h3>Médico que olha para você</h3><p>Avaliação individual, sem questionário automático decidindo por você.</p></div>
+        </li>
+        <li>
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M12 11v5M9.5 13.5h5"/></svg></span>
+          <div><h3>Tratamento na sua porta</h3><p>Farmácia parceira e entrega com acompanhamento do pedido.</p></div>
+        </li>
+        <li>
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></span>
+          <div><h3>Gente de verdade para conversar</h3><p>Dúvida sobre dose, efeito ou entrega? Fale com a equipe pelo WhatsApp.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Quem já começou a transformação</h2>
+      <p class="intro">Resultados variam de pessoa para pessoa e dependem da avaliação médica e do acompanhamento.</p>
+      <div class="testi">
+        <figure><blockquote><span class="ph">Depoimento real de cliente, com autorização</span></blockquote><figcaption><span class="ph">Nome, cidade</span></figcaption></figure>
+        <figure><blockquote><span class="ph">Depoimento real de cliente, com autorização</span></blockquote><figcaption><span class="ph">Nome, cidade</span></figcaption></figure>
+        <figure><blockquote><span class="ph">Depoimento real de cliente, com autorização</span></blockquote><figcaption><span class="ph">Nome, cidade</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantee">
+    <div class="wrap">
+      <div class="seal">Sem indicação, sem cobrança</div>
+      <div>
+        <h2 style="max-width:22ch">Você só segue com o tratamento se o médico indicar</h2>
+        <p>A decisão é sempre do médico, com base na sua saúde. Se o tratamento não for indicado para você, <span class="ph">devolvemos 100% do valor pago</span>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Perguntas frequentes</h2>
+      <div class="faq" style="margin-top:40px">
+        <details><summary>Quem pode fazer o tratamento?</summary><p>Quem decide é o médico, na avaliação individual. Ele analisa seu histórico de saúde, peso, medicamentos em uso e possíveis contraindicações.</p></details>
+        <details><summary>Preciso já ter receita?</summary><p>Não. A consulta faz parte do programa. Se houver indicação, o próprio médico emite a receita.</p></details>
+        <details><summary>E se o médico não indicar o tratamento?</summary><p><span class="ph">Você recebe o reembolso integral do valor pago.</span></p></details>
+        <details><summary>Quanto tempo leva para o medicamento chegar?</summary><p>Depois da receita emitida, o envio é feito pela farmácia parceira em até <span class="ph">X dias úteis</span>, dependendo da sua região.</p></details>
+        <details><summary>O tratamento tem efeitos colaterais?</summary><p>Como todo medicamento, pode ter. Os mais comuns são gastrointestinais, como náusea. O médico explica os riscos na consulta, e nossa equipe acompanha você durante todo o tratamento.</p></details>
+        <details><summary>Posso cancelar?</summary><p><span class="ph">Descreva aqui sua política de cancelamento.</span></p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" style="background:var(--lilac)">
+    <div class="wrap">
+      <h2>Sua transformação começa com uma consulta.</h2>
+      <p>Faça sua avaliação médica e descubra se o tratamento é indicado para você.</p>
+      <a class="btn" href="#CHECKOUT">Começar minha avaliação</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#">uau<span>.</span></a>
+    <p>A UAU é uma plataforma que conecta pacientes a médicos independentes e farmácias parceiras. A prescrição de qualquer medicamento depende exclusivamente da avaliação médica individual e não é garantida. Os resultados variam de pessoa para pessoa.</p>
+    <p>Responsável técnico: <span class="ph">Nome do médico, CRM-UF 000000</span> · Farmácia parceira: <span class="ph">Razão social, CNPJ, AFE Anvisa</span></p>
+    <p><span class="ph">Razão social da UAU · CNPJ 00.000.000/0000-00 · Endereço</span> · <a href="#">Política de privacidade</a> · <a href="#">Termos de uso</a></p>
+  </div>
+</footer>
+
+<div class="sticky-cta">
+  <span class="p"><span class="ph">R$ 0.000</span></span>
+  <a class="btn" href="#CHECKOUT">Começar avaliação</a>
+</div>
+
+</body>
 </html>
