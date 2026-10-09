@@ -125,6 +125,18 @@ section { padding-block: 72px; }
 .step { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--green); min-width: 0; }
 .step .n { font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color: var(--blue-ink); }
 .step p { color: var(--muted); }
+.steps.five { grid-template-columns: repeat(5, 1fr); }
+.checks.rich { gap: 16px; }
+.checks.rich li { align-items: flex-start; font-weight: 400; color: var(--muted); }
+.checks.rich li::before { margin-top: 2px; }
+.checks.rich strong { display: block; color: var(--green); font-weight: 700; }
+.flow-strip { margin-top: 40px; background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 24px; display: grid; gap: 14px; justify-items: center; text-align: center; }
+.flow-strip h3 { font-size: 1.1rem; font-weight: 700; font-family: var(--body); }
+.flow-strip ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.flow-strip li { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: .9rem; }
+.flow-strip li:not(:last-child)::after { content: "→"; color: var(--blue); font-weight: 700; }
+.flow-strip li:last-child { background: var(--blue); color: var(--white); border-radius: 999px; padding: 4px 12px; }
+.flow-strip p { color: var(--muted); font-size: .9rem; }
 
 /* faq */
 .faq { display: grid; gap: 0; max-width: 820px; }
@@ -154,14 +166,14 @@ footer .ph { color: #2C3F96; }
   .track { padding-inline: 20px; scroll-padding-inline: 20px; gap: 10px; }
   .track img { flex-basis: 86%; border-radius: 20px; }
   .arrow { display: none; }
-  .quotes, .videos, .steps.four { grid-template-columns: repeat(2, 1fr); }
+  .quotes, .videos, .steps.four, .steps.five { grid-template-columns: repeat(2, 1fr); }
   .steps, .plans { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
   .btn-cta { width: 100%; }
   section { padding-block: 52px; }
   .quotes { grid-template-columns: 1fr; }
-  .steps.four { grid-template-columns: 1fr; }
+  .steps.four, .steps.five { grid-template-columns: 1fr; }
   .nav .btn { padding: 8px 14px; }
 }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
@@ -229,19 +241,44 @@ footer .ph { color: #2C3F96; }
       <figcaption>Imagem ilustrativa</figcaption>
     </figure>
     <div class="doctor-text">
-      <span class="eyebrow">Equipe médica</span>
-      <h2>Um médico de verdade cuidando de você</h2>
-      <p class="lead">Antes de qualquer prescrição, você conversa com um médico por vídeo. Ele avalia seu histórico, decide se o tratamento é indicado e define a dose certa para o seu caso.</p>
-      <ul class="checks">
-        <li>Consulta individual por vídeo</li>
-        <li>Dose definida para o seu caso</li>
-        <li>Nova avaliação após 3 meses</li>
+      <span class="eyebrow">O programa</span>
+      <h2>Controle de peso com médico do começo ao fim</h2>
+      <p class="lead">Um programa só, com tudo integrado: consulta online, avaliação médica, acompanhamento e benefício na farmácia para a tirzepatida.</p>
+      <ul class="checks rich">
+        <li><span><strong>Consulta por telemedicina</strong>Atendimento online com profissional habilitado, de onde você estiver.</span></li>
+        <li><span><strong>Avaliação para tirzepatida</strong>O médico analisa seu histórico, seus objetivos e sua saúde hoje para montar uma estratégia só sua.</span></li>
+        <li><span><strong>Prescrição individual</strong>Feita para o seu caso, quando o tratamento for indicado.</span></li>
+        <li><span><strong>Acompanhamento na jornada</strong>Você acompanha sua evolução, e o médico reavalia a estratégia sempre que precisar.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="como-funciona">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Cinco passos, tudo online</h2>
+      <p class="lead">Nenhum medicamento é enviado sem consulta e prescrição médica.</p>
+    </div>
+    <div class="steps five">
+      <div class="step"><span class="n">Passo 1</span><h3>Escolha seu plano</h3><p>Veja qual opção combina com o seu momento.</p></div>
+      <div class="step"><span class="n">Passo 2</span><h3>Faça o pagamento</h3><p>Rápido e seguro, direto pelo site.</p></div>
+      <div class="step"><span class="n">Passo 3</span><h3>Agende sua consulta</h3><p>Depois da confirmação, escolha o dia e o horário que preferir.</p></div>
+      <div class="step"><span class="n">Passo 4</span><h3>Faça sua avaliação</h3><p>O médico analisa seu histórico, seus objetivos e suas condições de saúde.</p></div>
+      <div class="step"><span class="n">Passo 5</span><h3>Acompanhe sua evolução</h3><p>Siga com o acompanhamento do plano e novas avaliações quando precisar.</p></div>
+    </div>
+    <div class="flow-strip">
+      <h3>Tudo em uma experiência só</h3>
+      <ol>
+        <li>Plano</li><li>Pagamento</li><li>Consulta</li><li>Avaliação</li><li>Prescrição</li><li>Evolução</li>
+      </ol>
+      <p>Tecnologia, atendimento e acompanhamento organizados num só lugar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
   <div class="wrap">
     <div class="head">
       <span class="eyebrow">Relatos de clientes</span>
@@ -319,21 +356,6 @@ footer .ph { color: #2C3F96; }
   </div>
 </section>
 
-<section class="alt" id="como-funciona">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Como funciona</span>
-      <h2>Quatro passos, tudo online</h2>
-      <p class="lead">Nenhum medicamento é enviado sem consulta e prescrição médica.</p>
-    </div>
-    <div class="steps four">
-      <div class="step"><span class="n">1. Questionário</span><h3>Conte sobre você</h3><p>Responda perguntas sobre sua saúde, histórico e objetivos.</p></div>
-      <div class="step"><span class="n">2. Consulta</span><h3>Fale com o médico</h3><p>Um médico avalia seu caso e decide se o tratamento é indicado para você.</p></div>
-      <div class="step"><span class="n">3. Prescrição</span><h3>Receba o plano</h3><p>Se houver indicação, o médico prescreve e a farmácia parceira envia o medicamento.</p></div>
-      <div class="step"><span class="n">4. Acompanhamento</span><h3>Siga com suporte</h3><p>Você recebe o treino com professor, a reavaliação médica e suporte durante todo o tratamento.</p></div>
-    </div>
-  </div>
-</section>
 
 <section>
   <div class="wrap">
