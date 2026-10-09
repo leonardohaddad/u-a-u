@@ -119,6 +119,11 @@ section { padding-block: 72px; }
 .plan .badge { justify-self: start; font-size: .75rem; font-weight: 700; background: var(--green); color: var(--white); border-radius: 999px; padding: 4px 12px; }
 .plan p { color: var(--muted); }
 .plan .btn { justify-self: start; }
+.plan-price { display: grid; gap: 4px; }
+.plan-price s { color: var(--muted); font-size: .9rem; }
+.pp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.pp-row strong { font-family: var(--display); font-size: 2rem; font-weight: 500; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.pp-save { font-size: .85rem; font-weight: 600; color: var(--green-soft); }
 
 /* passos */
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -263,26 +268,36 @@ footer .ph { color: #2C3F96; }
     </div>
     <div class="plans">
       <article class="plan current">
-        <span class="badge">Você está aqui</span>
         <h3>Plano Essencial</h3>
         <span class="dur">3 meses de tratamento</span>
         <p>Consulta por telemedicina, avaliação médica, prescrição individual e acompanhamento durante os 3 meses.</p>
-        <p><strong>R$ 3.099,90</strong></p>
+        <div class="plan-price">
+          <s>De R$ 3.599,90</s>
+          <div class="pp-row"><strong>R$ 3.099,90</strong><span class="tag">14% OFF</span></div>
+          <span class="pp-save">Economize R$ 500,00 · equivale a R$ 1.033,30/mês</span>
+        </div>
         <a class="btn" href="https://app.medonhub.com/loja/peptideosaopaulo/oferta/de055511-ed05-43f0-92a4-6da84136e0a5">Começar com o Essencial</a>
       </article>
       <article class="plan">
         <h3>Plano Mensal</h3>
         <span class="dur">1 mês de tratamento</span>
         <p>Consulta por telemedicina, avaliação médica, prescrição individual e acompanhamento, mês a mês.</p>
-        <p><strong>R$ 1.197,90</strong></p>
+        <div class="plan-price">
+          <div class="pp-row"><strong>R$ 1.197,90</strong></div>
+          <span class="pp-save">Pagamento mensal</span>
+        </div>
         <a class="btn btn-ghost" href="https://app.medonhub.com/loja/peptideosaopaulo/oferta/feae7ebd-652b-490d-92c2-3e72a91b5b91">Escolher o Mensal</a>
       </article>
       <article class="plan">
-        <h3>Plano Completo</h3>
+        <h3>Plano Semestral</h3>
         <span class="dur">6 meses de tratamento</span>
-        <p>Tudo do Intermediário, mais acompanhamento com nutricionista durante os 6 meses.</p>
-        <p><strong><span class="ph">R$ 0.000</span></strong></p>
-        <a class="btn btn-ghost" href="#como-funciona">Escolher o Completo</a>
+        <p>Consulta por telemedicina, avaliação médica, prescrição individual e acompanhamento durante os 6 meses.</p>
+        <div class="plan-price">
+          <s>De R$ 6.980,00</s>
+          <div class="pp-row"><strong>R$ 5.990,00</strong><span class="tag">14% OFF</span></div>
+          <span class="pp-save">Economize R$ 990,00 · equivale a R$ 998,33/mês</span>
+        </div>
+        <a class="btn btn-ghost" href="https://app.medonhub.com/loja/peptideosaopaulo/oferta/d54df7b2-e70f-4739-8eaa-15e1447df306">Escolher o Semestral</a>
       </article>
     </div>
   </div>
