@@ -84,6 +84,12 @@ section { padding-block: 72px; }
 .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .checks li { display: flex; gap: 10px; align-items: center; font-weight: 500; }
 .checks li::before { content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
+.doctor { padding-top: 24px; }
+.doctor-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: center; }
+.doctor-photo { aspect-ratio: 4 / 5; max-width: 100%; border-radius: 24px; background: var(--cream); border: 2px dashed var(--line); display: grid; place-items: center; text-align: center; color: var(--muted); font-weight: 600; }
+.doctor-photo small { font-weight: 400; }
+.doctor-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 24px; display: block; box-shadow: 0 10px 30px rgba(25, 48, 30, .12); }
+.doctor-text { display: grid; gap: 18px; min-width: 0; }
 
 /* relatos de texto */
 .quotes { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -138,6 +144,7 @@ footer .wrap { display: grid; gap: 12px; }
 footer .ph { color: #2C3F96; }
 
 @media (max-width: 900px) {
+  .doctor-grid { grid-template-columns: 1fr; gap: 28px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero { padding-top: 16px; }
   .carousel { margin-inline: -20px; }
@@ -199,7 +206,7 @@ footer .ph { color: #2C3F96; }
         <span class="tag">Economize 14%</span>
       </div>
       <p class="plan-note">Plano Essencial · 3 meses de tratamento</p>
-      <a class="btn btn-cta" href="/essencial">Comece agora <span aria-hidden="true">→</span></a>
+      <a class="btn btn-cta" href="https://app.medonhub.com/loja/peptideosaopaulo">Comece agora <span aria-hidden="true">→</span></a>
       <p class="fine">Sujeito a avaliação médica. A prescrição não é garantida e depende da avaliação individual feita por médico. Quando prescrito, o medicamento é enviado por farmácia parceira. Cancele quando quiser.</p>
       <ul class="checks">
         <li>Consulta médica individual</li>
@@ -211,6 +218,7 @@ footer .ph { color: #2C3F96; }
     </div>
   </div>
 </section>
+
 
 <section class="alt">
   <div class="wrap">
