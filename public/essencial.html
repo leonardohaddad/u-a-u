@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Programa Essencial UAU: 3 meses de tratamento com consulta médica online, reavaliação, treino personalizado com professor e app de treinos.">
+<meta name="description" content="Programa Essencial UAU: 3 meses de tratamento com consulta médica online, avaliação para tirzepatida, prescrição individual e acompanhamento.">
 <title>Programa Essencial UAU</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -95,9 +95,7 @@ section { padding-block: 64px; }
 .fine { font-size: .75rem; color: var(--muted); }
 
 /* o que inclui */
-.inc { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.inc div:nth-child(n+6) { background: var(--mint); border-color: transparent; }
-.inc div:nth-child(n+6) .ic { background: var(--white); }
+.inc { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .inc div { background: var(--white); border: 1px solid var(--line); border-radius: 18px; padding: 22px; display: grid; gap: 12px; align-content: start; min-width: 0; }
 .inc .ic { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; background: var(--mint); color: var(--green); }
 .inc p { color: var(--muted); font-size: .9rem; }
@@ -150,6 +148,7 @@ footer .wrap { display: grid; gap: 10px; }
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
   .inc { grid-template-columns: repeat(2, 1fr); }
+  .inc div:last-child { grid-column: 1 / -1; }
   .timeline { grid-template-columns: 1fr; }
   .tl + .tl { border-left: 0; border-top: 1px solid var(--line); }
   .flow { grid-template-columns: 1fr; gap: 0; }
@@ -202,8 +201,8 @@ footer .wrap { display: grid; gap: 10px; }
       <div class="mini">
         <div><svg class="ico"><use href="#i-steth"/></svg>Consulta online</div>
         <div><svg class="ico"><use href="#i-box"/></svg>Entrega em casa</div>
-        <div><svg class="ico"><use href="#i-redo"/></svg>Reavaliação</div>
-        <div><svg class="ico"><use href="#i-gym"/></svg>Treino</div>
+        <div><svg class="ico"><use href="#i-rx"/></svg>Prescrição individual</div>
+        <div><svg class="ico"><use href="#i-chart"/></svg>Acompanhamento</div>
       </div>
       <div class="months"><b>3</b><span>meses de tratamento<br>com tirzepatida</span></div>
     </div>
@@ -212,14 +211,6 @@ footer .wrap { display: grid; gap: 10px; }
       <span class="eyebrow">3 meses · tirzepatida</span>
       <h1>Programa Essencial</h1>
       <p class="sub">Consulta online, medicamento em casa e um médico acompanhando sua evolução.</p>
-      <div class="coach">
-        <span class="coach-head"><b>+</b> Seu professor de academia</span>
-        <ul>
-          <li><span class="ci"><svg class="ico"><use href="#i-gym"/></svg></span><span><strong>Treino personalizado</strong>montado por um professor para o seu corpo</span></li>
-          <li><span class="ci"><svg class="ico"><use href="#i-phone"/></svg></span><span><strong>App com seus treinos</strong>tudo no celular, na hora de treinar</span></li>
-          <li><span class="ci"><svg class="ico"><use href="#i-chat"/></svg></span><span><strong>Dúvidas a qualquer hora</strong>o professor responde sempre que precisar</span></li>
-        </ul>
-      </div>
       <div class="price-box">
         <div class="price-row">
           <strong>R$ 3.099,90</strong>
@@ -246,14 +237,11 @@ footer .wrap { display: grid; gap: 10px; }
       <h2>Tudo em um só plano</h2>
     </div>
     <div class="inc">
-      <div><span class="ic"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Consulta médica online</h3><p>Por vídeo, sem sair de casa.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-rx"/></svg></span><h3>Prescrição individual</h3><p>Se indicada, feita para o seu caso.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-box"/></svg></span><h3>Medicamento em casa</h3><p>Enviado por farmácia parceira.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-redo"/></svg></span><h3>Reavaliação médica</h3><p>Nova consulta ao fim dos 3 meses.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-chat"/></svg></span><h3>Suporte no WhatsApp</h3><p>Equipe disponível durante o programa.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-gym"/></svg></span><h3>Treino personalizado</h3><p>Montado por um professor de academia.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-phone"/></svg></span><h3>App de treinos</h3><p>Todos os seus treinos no celular.</p></div>
-      <div><span class="ic"><svg class="ico"><use href="#i-coach"/></svg></span><h3>Professor à disposição</h3><p>Tire dúvidas sempre que quiser.</p></div>
+      <div><span class="ic"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Consulta por telemedicina</h3><p>Online, com profissional habilitado.</p></div>
+      <div><span class="ic"><svg class="ico"><use href="#i-chart"/></svg></span><h3>Avaliação para tirzepatida</h3><p>Histórico, objetivos e saúde atual.</p></div>
+      <div><span class="ic"><svg class="ico"><use href="#i-rx"/></svg></span><h3>Prescrição individual</h3><p>Feita para o seu caso, quando indicada.</p></div>
+      <div><span class="ic"><svg class="ico"><use href="#i-box"/></svg></span><h3>Benefício farmacêutico</h3><p>Condição especial na tirzepatida.</p></div>
+      <div><span class="ic"><svg class="ico"><use href="#i-redo"/></svg></span><h3>Acompanhamento</h3><p>Novas avaliações quando necessário.</p></div>
     </div>
   </div>
 </section>
@@ -268,17 +256,17 @@ footer .wrap { display: grid; gap: 10px; }
       <div class="tl">
         <span class="m">Mês 1</span>
         <div class="bar"><i style="width:33%"></i></div>
-        <ul><li>Consulta com o médico</li><li>Prescrição e envio</li><li>Professor monta seu treino</li><li>Rotina de academia começa</li></ul>
+        <ul><li>Agendamento da consulta</li><li>Avaliação médica</li><li>Prescrição, se indicada</li></ul>
       </div>
       <div class="tl">
         <span class="m">Mês 2</span>
         <div class="bar"><i style="width:66%"></i></div>
-        <ul><li>Tratamento em andamento</li><li>Suporte no WhatsApp</li><li>Rotina de academia</li></ul>
+        <ul><li>Tratamento em andamento</li><li>Acompanhamento da evolução</li></ul>
       </div>
       <div class="tl last">
         <span class="m">Mês 3</span>
         <div class="bar"><i style="width:100%"></i></div>
-        <ul><li>Reavaliação médica</li><li>Próximos passos definidos</li></ul>
+        <ul><li>Nova avaliação, se necessário</li><li>Próximos passos definidos</li></ul>
       </div>
     </div>
   </div>
@@ -319,7 +307,7 @@ footer .wrap { display: grid; gap: 10px; }
         <details><summary>Preciso ter receita?</summary><p>Não. A consulta está incluída no plano e é nela que o médico avalia se o tratamento é indicado para você.</p></details>
         <details><summary>E se o médico não indicar o tratamento?</summary><p><span class="ph">Explique aqui a política de reembolso da UAU.</span></p></details>
         <details><summary>Quanto tempo demora para chegar?</summary><p><span class="ph">Prazo de envio da farmácia parceira.</span></p></details>
-        <details><summary>O que acontece depois dos 3 meses?</summary><p>Na reavaliação, o médico define com você os próximos passos. Se for o caso, você pode seguir para um novo plano.</p></details>
+        <details><summary>O que acontece depois dos 3 meses?</summary><p>O médico avalia sua evolução e define com você os próximos passos. Se for o caso, você pode seguir para um novo plano.</p></details>
       </div>
     </div>
   </div>
