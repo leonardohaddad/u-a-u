@@ -40,6 +40,10 @@ section { padding-block: 72px; }
 .head { display: grid; gap: 12px; margin-bottom: 40px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; background: var(--green); color: var(--white); text-decoration: none; font-weight: 600; border-radius: 999px; padding: 14px 28px; border: 0; cursor: pointer; font: 600 1rem var(--body); }
 .btn:hover { background: #24452B; }
+.btn-cta { background: var(--blue); font-size: 1.1rem; padding: 18px 36px; gap: 10px; box-shadow: 0 8px 22px rgba(58, 85, 200, .35); transition: transform .15s, box-shadow .15s, background .15s; }
+.btn-cta:hover { background: #2F47AE; transform: translateY(-2px); box-shadow: 0 12px 28px rgba(58, 85, 200, .45); }
+.btn-cta span { transition: transform .15s; }
+.btn-cta:hover span { transform: translateX(4px); }
 .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue-ink); outline-offset: 3px; }
 .btn-ghost { background: transparent; color: var(--green); border: 1.5px solid var(--green); }
 .btn-ghost:hover { background: var(--green); color: var(--white); }
@@ -144,6 +148,7 @@ footer .ph { color: #2C3F96; }
   .steps, .plans { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
+  .btn-cta { width: 100%; }
   section { padding-block: 52px; }
   .quotes { grid-template-columns: 1fr; }
   .steps.four { grid-template-columns: 1fr; }
@@ -194,7 +199,7 @@ footer .ph { color: #2C3F96; }
         <span class="tag">Economize 14%</span>
       </div>
       <p class="plan-note">Plano Essencial · 3 meses de tratamento</p>
-      <a class="btn" href="/essencial">Comece agora</a>
+      <a class="btn btn-cta" href="/essencial">Comece agora <span aria-hidden="true">→</span></a>
       <p class="fine">Sujeito a avaliação médica. A prescrição não é garantida e depende da avaliação individual feita por médico. Quando prescrito, o medicamento é enviado por farmácia parceira. Cancele quando quiser.</p>
       <ul class="checks">
         <li>Consulta médica individual</li>
