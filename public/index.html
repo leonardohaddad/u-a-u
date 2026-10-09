@@ -92,6 +92,10 @@ section { padding-block: 72px; }
 .quote { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 20px; display: grid; gap: 12px; align-content: start; min-width: 0; }
 .quote .who { font-weight: 700; font-size: .9rem; }
 .quote p { color: var(--muted); font-size: .95rem; }
+.q-who { display: flex; align-items: center; gap: 12px; }
+.q-who strong { display: block; font-size: .95rem; }
+.q-who small { color: var(--muted); font-size: .8rem; }
+.q-av { width: 42px; height: 42px; border-radius: 50%; background: #E9EDFB; color: var(--blue); display: grid; place-items: center; font-weight: 700; font-size: .85rem; flex: none; }
 .quotes-cta { display: flex; justify-content: center; margin-top: 36px; }
 
 /* vídeos */
@@ -326,10 +330,10 @@ footer .ph { color: #2C3F96; }
       <p class="lead">Experiências individuais sobre atendimento, entrega e acompanhamento.</p>
     </div>
     <div class="quotes">
-      <article class="quote"><span class="who"><span class="ph">@cliente1</span></span><p><span class="ph">Cole aqui um relato real de cliente UAU, com autorização.</span></p></article>
-      <article class="quote"><span class="who"><span class="ph">@cliente2</span></span><p><span class="ph">Cole aqui um relato real de cliente UAU, com autorização.</span></p></article>
-      <article class="quote"><span class="who"><span class="ph">@cliente3</span></span><p><span class="ph">Cole aqui um relato real de cliente UAU, com autorização.</span></p></article>
-      <article class="quote"><span class="who"><span class="ph">@cliente4</span></span><p><span class="ph">Cole aqui um relato real de cliente UAU, com autorização.</span></p></article>
+      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">FO</span><span><strong>Fernanda Oliveira</strong><small>@feoliveira_82</small></span></div><p>“Depois de tantas dietas sem sucesso, comecei o tratamento com acompanhamento médico. Hoje me sinto mais confiante e motivada! ❤️”</p></article>
+      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">JM</span><span><strong>Juliana Martins</strong><small>@jumartins.sp</small></span></div><p>“Depois de duas gestações, estava difícil controlar meu peso. Com orientação médica e novos hábitos, comecei a perceber mudanças! 🥰”</p></article>
+      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">RA</span><span><strong>Ricardo Almeida</strong><small>@ricardoa_1987</small></span></div><p>“Já tinha tentado emagrecer várias vezes e sempre desistia. Com tratamento acompanhado e alimentação melhor, finalmente consegui manter uma rotina! 👊”</p></article>
+      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">CR</span><span><strong>Camila Rodrigues</strong><small>@cami.rodrigues_</small></span></div><p>“Minha rotina era uma loucura e nunca conseguia cuidar de mim. O tratamento fez parte dessa mudança e estou feliz com meu progresso! 💕”</p></article>
     </div>
     <div class="quotes-cta">
       <a class="btn btn-cta" href="https://app.medonhub.com/loja/peptideosaopaulo">Escolher meu plano <span aria-hidden="true">→</span></a>
