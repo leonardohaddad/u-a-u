@@ -57,7 +57,7 @@ section { padding-block: 72px; }
 
 /* hero */
 .hero { padding-block: 40px 72px; }
-.hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 32px; align-items: stretch; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 420px) 1fr; gap: 56px; align-items: center; justify-content: center; }
 .carousel { position: relative; max-width: 100%; min-width: 0; align-self: start; display: grid; gap: 14px; }
 .track { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
 .track::-webkit-scrollbar { display: none; }
@@ -70,6 +70,7 @@ section { padding-block: 72px; }
 .dots button { width: 9px; height: 9px; border-radius: 999px; border: 0; padding: 0; background: var(--line); cursor: pointer; transition: width .2s, background .2s; }
 .dots button[aria-current="true"] { width: 26px; background: var(--green); }
 .buy { display: grid; gap: 20px; align-content: start; min-width: 0; }
+.buy h1 { font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.12; }
 .price { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .price s { color: var(--muted); }
 .price strong { font-family: var(--display); font-size: 2.6rem; font-weight: 500; }
@@ -205,8 +206,8 @@ footer .ph { color: #2C3F96; }
     <div class="carousel" aria-roledescription="carrossel" aria-label="Imagens do tratamento UAU">
       <div class="track" id="track">
         <img src="img/carrossel-1.webp" alt="Mulher sorrindo olhando o celular. Tratamento completo com tirzepatida" width="1080" height="1350">
-        <img src="img/carrossel-medica.webp" alt="Médica sorrindo no computador. Avaliação médica online" width="1080" height="1350" loading="lazy">
-        <img src="img/carrossel-frasco.webp" alt="Frasco de tirzepatida. Receba em casa após a consulta. Bônus: acompanhamento nutricional" width="1080" height="1350" loading="lazy">
+        <img src="img/carrossel-medica-v2.webp" alt="Médica sorrindo no computador. Avaliação médica online" width="1080" height="1350" loading="lazy">
+        <img src="img/carrossel-frasco-v2.webp" alt="Frasco de tirzepatida. Receba em casa após a consulta. Bônus: acompanhamento nutricional" width="1080" height="1350" loading="lazy">
         <img src="img/carrossel-treino.webp" alt="Mulher sorrindo com toalha e garrafa de água. Orientação de treinos durante o tratamento" width="1080" height="1350" loading="lazy">
       </div>
       <button class="arrow prev" type="button" aria-label="Imagem anterior">‹</button>
