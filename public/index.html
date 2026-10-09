@@ -13,8 +13,8 @@
 :root {
   --green: #19301E;      /* texto principal e botões */
   --green-soft: #468254; /* detalhes de sucesso */
-  --blue: #8ECDEB;       /* azul claro: faixa de oferta, selos e botões de destaque */
-  --blue-ink: #2A7FA8;   /* azul mais escuro para textos pequenos sobre fundo claro */
+  --blue: #3A55C8;       /* azul do frasco: faixa de oferta, selos e botões de destaque */
+  --blue-ink: #3A55C8;   /* mesmo azul para textos pequenos */
   --cream: #F4F1E7;      /* fundo de seções alternadas */
   --paper: #FCFBF8;      /* fundo principal */
   --muted: #5E665F;      /* textos secundários */
@@ -43,14 +43,14 @@ section { padding-block: 72px; }
 .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--blue-ink); outline-offset: 3px; }
 .btn-ghost { background: transparent; color: var(--green); border: 1.5px solid var(--green); }
 .btn-ghost:hover { background: var(--green); color: var(--white); }
-.ph { display: inline-block; background: #EAF6FC; color: #1F5F80; border: 1px dashed var(--blue-ink); border-radius: 6px; padding: 1px 6px; font-size: .85em; font-weight: 600; }
+.ph { display: inline-block; background: #E9EDFB; color: #2C3F96; border: 1px dashed var(--blue-ink); border-radius: 6px; padding: 1px 6px; font-size: .85em; font-weight: 600; }
 
 /* topo */
 .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; background: var(--paper); border-bottom: 1px solid var(--line); }
 .nav .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; }
 .logo { font-family: var(--display); font-size: 2rem; font-weight: 500; letter-spacing: -0.03em; text-decoration: none; }
 .nav .btn { padding: 10px 20px; font-size: .9rem; }
-.offer { background: var(--blue); color: var(--green); }
+.offer { background: var(--blue); color: var(--white); }
 .offer .wrap { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; justify-content: center; padding-block: 12px; font-weight: 600; text-align: center; }
 .timer { display: flex; gap: 6px; }
 .timer div { background: var(--white); color: var(--green); border-radius: 8px; min-width: 56px; padding: 4px 6px; text-align: center; }
@@ -75,7 +75,7 @@ section { padding-block: 72px; }
 .price { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .price s { color: var(--muted); }
 .price strong { font-family: var(--display); font-size: 2.6rem; font-weight: 500; }
-.tag { background: var(--blue); color: var(--green); border-radius: 999px; padding: 4px 12px; font-size: .8rem; font-weight: 700; }
+.tag { background: var(--blue); color: var(--white); border-radius: 999px; padding: 4px 12px; font-size: .8rem; font-weight: 700; }
 .fine { font-size: .78rem; color: var(--muted); }
 .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
 .checks li { display: flex; gap: 10px; align-items: center; font-weight: 500; }
@@ -126,12 +126,12 @@ details ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
 
 .cta-band { background: var(--green); color: var(--white); text-align: center; }
 .cta-band .wrap { display: grid; gap: 20px; justify-items: center; }
-.cta-band .btn { background: var(--blue); color: var(--green); }
-.cta-band .btn:hover { background: #B5DFF3; }
+.cta-band .btn { background: var(--blue); color: var(--white); }
+.cta-band .btn:hover { background: #2F47AE; }
 
 footer { background: var(--green); color: #C9D3CA; font-size: .8rem; padding-block: 40px; border-top: 1px solid #2D4733; }
 footer .wrap { display: grid; gap: 12px; }
-footer .ph { color: #1F5F80; }
+footer .ph { color: #2C3F96; }
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
