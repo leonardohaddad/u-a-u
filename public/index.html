@@ -98,18 +98,14 @@ section { padding-block: 72px; }
 .q-who strong { display: block; font-size: .95rem; }
 .q-who small { color: var(--muted); font-size: .8rem; }
 .q-av { width: 42px; height: 42px; border-radius: 50%; background: #E9EDFB; color: var(--blue); display: grid; place-items: center; font-weight: 700; font-size: .85rem; flex: none; }
-.refund { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; background: var(--white); border-radius: 28px; padding: 44px; max-width: 980px; margin: 0 auto; box-shadow: 0 10px 30px rgba(25, 48, 30, .08); }
-.refund-badge { aspect-ratio: 1; max-width: 100%; border-radius: 50%; background: var(--blue); color: var(--white); display: grid; place-items: center; align-content: center; gap: 4px; text-align: center; padding: 24px; }
-.refund-badge svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.refund-badge b { font-family: var(--display); font-size: 4rem; font-weight: 500; line-height: 1; }
-.refund-badge span { font-size: .9rem; font-weight: 600; }
+.refund { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; background: var(--white); border-radius: 28px; padding: 44px; max-width: 760px; margin: 0 auto; box-shadow: 0 10px 30px rgba(25, 48, 30, .08); }
 .refund-text { display: grid; gap: 16px; min-width: 0; }
 .refund-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .refund-list li { position: relative; padding-left: 30px; color: var(--muted); }
 .refund-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
 .refund-list strong { color: var(--green); }
 .refund-contact { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
-@media (max-width: 760px) { .refund { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; text-align: left; } .refund-badge { width: 180px; justify-self: center; } .refund-badge b { font-size: 3rem; } .refund .btn-cta { width: 100%; } }
+@media (max-width: 760px) { .refund { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; text-align: left; } .refund .btn-cta { width: 100%; } }
 
 /* vídeos */
 .videos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -321,11 +317,6 @@ footer .ph { color: #2C3F96; }
 <section class="alt" id="reembolso">
   <div class="wrap">
     <div class="refund">
-      <div class="refund-badge" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
-        <b>100%</b>
-        <span>do valor de volta</span>
-      </div>
       <div class="refund-text">
         <span class="eyebrow">Compra sem risco</span>
         <h2>E se o médico não indicar o tratamento?</h2>
