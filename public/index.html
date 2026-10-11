@@ -98,7 +98,18 @@ section { padding-block: 72px; }
 .q-who strong { display: block; font-size: .95rem; }
 .q-who small { color: var(--muted); font-size: .8rem; }
 .q-av { width: 42px; height: 42px; border-radius: 50%; background: #E9EDFB; color: var(--blue); display: grid; place-items: center; font-weight: 700; font-size: .85rem; flex: none; }
-.quotes-cta { display: flex; justify-content: center; margin-top: 36px; }
+.refund { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: center; background: var(--white); border-radius: 28px; padding: 44px; max-width: 980px; margin: 0 auto; box-shadow: 0 10px 30px rgba(25, 48, 30, .08); }
+.refund-badge { aspect-ratio: 1; max-width: 100%; border-radius: 50%; background: var(--blue); color: var(--white); display: grid; place-items: center; align-content: center; gap: 4px; text-align: center; padding: 24px; }
+.refund-badge svg { width: 40px; height: 40px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.refund-badge b { font-family: var(--display); font-size: 4rem; font-weight: 500; line-height: 1; }
+.refund-badge span { font-size: .9rem; font-weight: 600; }
+.refund-text { display: grid; gap: 16px; min-width: 0; }
+.refund-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.refund-list li { position: relative; padding-left: 30px; color: var(--muted); }
+.refund-list li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat; }
+.refund-list strong { color: var(--green); }
+.refund-contact { font-size: .85rem; color: var(--muted); overflow-wrap: anywhere; }
+@media (max-width: 760px) { .refund { grid-template-columns: 1fr; gap: 28px; padding: 28px 22px; text-align: left; } .refund-badge { width: 180px; justify-self: center; } .refund-badge b { font-size: 3rem; } .refund .btn-cta { width: 100%; } }
 
 /* vídeos */
 .videos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
@@ -307,21 +318,26 @@ footer .ph { color: #2C3F96; }
   </div>
 </section>
 
-<section class="alt">
+<section class="alt" id="reembolso">
   <div class="wrap">
-    <div class="head">
-      <span class="eyebrow">Relatos de clientes</span>
-      <h2>O que nossos pacientes contam</h2>
-      <p class="lead">Histórias de quem já começou o tratamento com a gente.</p>
-    </div>
-    <div class="quotes">
-      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">FO</span><span><strong>Fernanda Oliveira</strong><small>@feoliveira_82</small></span></div><p>“Depois de tantas dietas sem sucesso, comecei o tratamento com acompanhamento médico. Hoje me sinto mais confiante e motivada!”</p></article>
-      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">JM</span><span><strong>Juliana Martins</strong><small>@jumartins.sp</small></span></div><p>“Depois de duas gestações, estava difícil controlar meu peso. Com orientação médica e novos hábitos, comecei a perceber mudanças!”</p></article>
-      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">RA</span><span><strong>Ricardo Almeida</strong><small>@ricardoa_1987</small></span></div><p>“Já tinha tentado emagrecer várias vezes e sempre desistia. Com tratamento acompanhado e alimentação melhor, finalmente consegui manter uma rotina!”</p></article>
-      <article class="quote"><div class="q-who"><span class="q-av" aria-hidden="true">CR</span><span><strong>Camila Rodrigues</strong><small>@cami.rodrigues_</small></span></div><p>“Minha rotina era uma loucura e nunca conseguia cuidar de mim. O tratamento fez parte dessa mudança e estou feliz com meu progresso!”</p></article>
-    </div>
-    <div class="quotes-cta">
-      <a class="btn btn-cta" href="https://app.medonhub.com/loja/peptideosaopaulo">Escolher meu plano <span aria-hidden="true">→</span></a>
+    <div class="refund">
+      <div class="refund-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+        <b>100%</b>
+        <span>do valor de volta</span>
+      </div>
+      <div class="refund-text">
+        <span class="eyebrow">Compra sem risco</span>
+        <h2>E se o médico não indicar o tratamento?</h2>
+        <p class="lead">Você recebe de volta 100% do valor que pagou.</p>
+        <ul class="refund-list">
+          <li><strong>A consulta vem primeiro.</strong> O médico avalia se a Tirzepatida é indicada para você.</li>
+          <li><strong>Sem prescrição, reembolso total.</strong> Se o tratamento não for indicado, devolvemos todo o valor.</li>
+          <li><strong>Pelo mesmo meio de pagamento.</strong> O prazo depende da operadora do cartão ou do banco.</li>
+        </ul>
+        <p class="refund-contact">Para pedir o reembolso, fale com a gente: clinicsaopaulo@gmail.com · segunda a sexta, das 9h às 18h.</p>
+        <div><a class="btn btn-cta" href="https://app.medonhub.com/loja/peptideosaopaulo">Escolher meu plano <span aria-hidden="true">→</span></a></div>
+      </div>
     </div>
   </div>
 </section>
